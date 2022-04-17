@@ -1,0 +1,210 @@
+.student-report-modal {
+  .modal-content {
+    border: none;
+    border-radius: 20px;
+
+    .modal-body {
+      padding: 20px;
+      position: relative;
+
+      & > img {
+        position: absolute;
+        top: 20px;
+        right: 23px;
+        height: 13px;
+        opacity: 0.3;
+        cursor: pointer;
+      }
+
+      h3 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+
+      .chart-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .chart-wrapper {
+          h4 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            text-align: center;
+          }
+        }
+
+        .chart-wrapper:first-child {
+          // background-color: lightcoral;
+          width: 200px;
+        }
+      }
+
+      .btn-wrapper {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+
+        & > button {
+          background-color: rgb(224, 224, 224);
+          color: #000;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+.teacher-dashboard {
+  height: 100vh;
+  display: flex;
+
+  & > .left {
+    height: 100%;
+    width: 95px;
+    padding: 15px;
+  }
+
+  & > .right {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+
+    .top-bar {
+      width: 100%;
+      background-color: #f3f3f3;
+      display: flex !important;
+      justify-content: space-between !important;
+      padding: 20px 25px !important;
+      border-radius: 10px !important;
+      border-radius: 10px;
+
+      .exam-info,
+      .time-left {
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 30px;
+        }
+      }
+
+      & > h3 {
+        margin-top: 5px;
+        font-size: 1.4rem;
+      }
+
+      .exam-info {
+        margin-right: 60px;
+        padding-top: 3px;
+        display: flex;
+        align-items: center;
+
+        h3 {
+          font-size: 1.5rem;
+          margin-left: 10px;
+        }
+      }
+
+      .time-left {
+        h3 {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .bottom-container {
+      height: calc(100% - 92px);
+      overflow-y: scroll;
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .student-card {
+        // background-color: #f3f3f3;
+        background-color: #f9f9f9;
+        // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        // box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        height: min-content;
+        padding: 25px 20px;
+        border-radius: 15px;
+        margin: 30px 35px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > img {
+          border-radius: 500px;
+          padding: 2px;
+          border: 2px solid #2271cb;
+        }
+
+        h3 {
+          margin-top: 10px;
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: #2271cb;
+        }
+
+        .link-container {
+          margin-top: 10px;
+          display: flex;
+          img {
+            height: 25px;
+            filter: saturate(0);
+            opacity: 0.7;
+
+            &:first-child {
+              margin-right: 10px;
+            }
+
+            &:hover {
+              filter: saturate(1);
+              opacity: 1;
+            }
+          }
+        }
+
+        .info-container {
+          display: flex;
+          margin-top: 15px;
+
+          .info-box {
+            width: 110px;
+            text-align: center;
+            background-color: rgba(0, 118, 253, 0.1);
+            padding: 8px 15px;
+            border-radius: 10px;
+
+            .info {
+              font-size: 1.2rem;
+              font-weight: 600;
+            }
+
+            .tag {
+              font-size: 0.9rem;
+              line-height: 1rem;
+              padding-top: 10px;
+            }
+
+            &:first-child {
+              margin-right: 15px;
+            }
+          }
+        }
+
+        button {
+          margin-top: 20px;
+          font-family: $outfit;
+          font-size: 1rem;
+          padding: 4px 15px !important;
+        }
+      }
+    }
+  }
+}
